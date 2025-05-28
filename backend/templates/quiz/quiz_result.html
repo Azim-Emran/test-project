@@ -1,0 +1,43 @@
+<!-- templates/quiz/result_summary.html -->
+{% extends 'layout.html' %}
+{% block content %}
+<div class="quiz-results container mt-4">
+  <h2 class="text-success">🎯 Quiz Summary</h2>
+  <p><strong>Score:</strong> {{ score }}/{{ total }} ({{ percent }}%)</p>
+  <p><strong>Feedback:</strong> {{ feedback }}</p>
+  <p><strong>Recommendation:</strong> {{ recommendation }}</p>
+
+  <div class="btn-group mt-3">
+    <a href="{{ url_for('quiz_bp.quiz_home') }}" class="btn btn-secondary">🏠 Back to Quiz Home</a>
+    <a href="{{ url_for('quiz_bp.retry_quiz') }}" class="btn btn-warning">🔁 Retry Quiz</a>
+    <a href="{{ url_for('quiz_bp.practice_weak_topics') }}" class="btn btn-info">📚 Practice Weak Topics</a>
+  </div>
+
+  <hr />
+  <h4>🔍 Detailed Answers</h4>
+  <table class="table table-bordered mt-3">
+    <thead class="table-light">
+      <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Your Answer</th>
+        <th>Correct Answer</th>
+        <th>Explanation</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in results %}
+      <tr class="{{ 'table-success' if r.is_correct else 'table-danger' }}">
+        <td>{{ loop.index }}</td>
+        <td>{{ r.question }}</td>
+        <td>{{ r.user_answer }}</td>
+        <td>{{ r.correct_answer }}</td>
+        <td>{{ r.explanation or 'N/A' }}</td>
+        <td>{{ '✅' if r.is_correct else '❌' }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

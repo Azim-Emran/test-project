@@ -1,0 +1,32 @@
+[
+    {
+        "concept": "Solving Linear Equations",
+        "level": "Beginner",
+        "questions": [
+            {
+                "question": "Solve for x: 2x + 3 = 11",
+                "answer": "x = 4",
+                "hint": "Isolate 2x by subtracting 3.",
+                "explanation": "Subtract 3 then divide by 2: (11 - 3)/2 = 4"
+            },
+            {
+                "question": "What is the value of x in 3x = 12?",
+                "answer": "x = 4",
+                "hint": "Isolate x by dividing both sides by 3.",
+                "explanation": "Divide both sides by 3: 12 / 3 = 4"
+            }
+        ]
+    },
+    {
+        "concept": "Understanding Angles",
+        "level": "Beginner",
+        "questions": [
+            {
+                "question": "What is the sum of the angles in a triangle?",
+                "answer": "180\u00b0",
+                "hint": "Number of sides of the triangle.",
+                "explanation": "The sum of the interior angles in any triangle is 180\u00b0."
+            }
+        ]
+    }
+]

@@ -1,0 +1,5 @@
+| student\_id | topic            | question\_id | is\_correct | time\_taken |
+| ----------- | ---------------- | ------------ | ----------- | ----------- |
+| 1           | Linear Equations | LEQ1         | 1           | 22          |
+| 1           | Angles           | ANQ2         | 0           | 33          |
+| 2           | Fractions        | FRQ1         | 0           | 45          |

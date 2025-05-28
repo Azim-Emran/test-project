@@ -1,0 +1,27 @@
+{
+  "concept": "Solving Linear Equations",
+  "level": "Beginner",
+  "questions": [
+    {
+      "difficulty": "easy",
+      "question": "Solve for x: x + 3 = 7",
+      "choices": ["x = 4", "x = 5", "x = 6", "x = 3"],
+      "answer": "x = 4",
+      "explanation": "Subtract 3 from both sides."
+    },
+    {
+      "difficulty": "medium",
+      "question": "Solve for x: 2x + 3 = 11",
+      "choices": ["x = 3", "x = 4", "x = 5", "x = 6"],
+      "answer": "x = 4",
+      "explanation": "Subtract 3 and divide by 2."
+    },
+    {
+      "difficulty": "hard",
+      "question": "Solve for x: 3x - 7 = 2x + 5",
+      "choices": ["x = 12", "x = 11", "x = -5", "x = -12"],
+      "answer": "x = 12",
+      "explanation": "Move terms and solve: 3x - 2x = 5 + 7"
+    }
+  ]
+}

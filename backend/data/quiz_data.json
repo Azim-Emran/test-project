@@ -1,0 +1,104 @@
+[
+  {
+    "topic": "Linear Equations",
+    "questions": [
+      {
+        "question": "Solve: 3x + 5 = 11",
+        "answer": "2",
+        "hint": "Subtract 5 from both sides, then divide by 3.",
+        "explanation": "3x = 6 → x = 2"
+      },
+      {
+        "question": "Find the value of x: 4x - 7 = 9",
+        "answer": "4",
+        "hint": "Add 7 to both sides, then divide by 4.",
+        "explanation": "4x = 16 → x = 4"
+      }
+    ]
+  },
+  {
+    "topic": "Pythagoras Theorem",
+    "questions": [
+      {
+        "question": "What is the length of the hypotenuse if the other sides are 6 and 8 units?",
+        "answer": "10",
+        "hint": "Use the formula: a² + b² = c².",
+        "explanation": "6² + 8² = 36 + 64 = 100 → √100 = 10"
+      },
+      {
+        "question": "Find the missing side: Hypotenuse is 13, one side is 5.",
+        "answer": "12",
+        "hint": "Use c² - a² = b².",
+        "explanation": "13² - 5² = 169 - 25 = 144 → √144 = 12"
+      }
+    ]
+  },
+  {
+    "topic": "Simultaneous Equations",
+    "questions": [
+      {
+        "question": "Solve: x + y = 10 and x - y = 2",
+        "answer": "6, 4",
+        "hint": "Add and subtract equations to eliminate variables.",
+        "explanation": "Add: 2x = 12 → x = 6. Then y = 4."
+      },
+      {
+        "question": "Solve: 2x + 3y = 12 and x - y = 1",
+        "answer": "3, 2",
+        "hint": "Use substitution or elimination.",
+        "explanation": "x = y + 1 → 2(y+1) + 3y = 12 → y = 2, x = 3"
+      }
+    ]
+  },
+  {
+    "topic": "Algebraic Expressions",
+    "questions": [
+      {
+        "question": "Simplify: 3a + 4a - 2a",
+        "answer": "5a",
+        "hint": "Combine like terms.",
+        "explanation": "3a + 4a - 2a = 5a"
+      },
+      {
+        "question": "Expand: (x + 2)(x + 3)",
+        "answer": "x² + 5x + 6",
+        "hint": "Use FOIL method.",
+        "explanation": "x² + 3x + 2x + 6 = x² + 5x + 6"
+      }
+    ]
+  },
+  {
+    "topic": "Probability",
+    "questions": [
+      {
+        "question": "What is the probability of rolling a 4 on a fair 6-sided die?",
+        "answer": "1/6",
+        "hint": "There are 6 outcomes, one is 4.",
+        "explanation": "P = 1/6"
+      },
+      {
+        "question": "A bag has 2 red, 3 blue, and 5 green balls. P(drawing a red)?",
+        "answer": "1/5",
+        "hint": "Total = 10, red = 2.",
+        "explanation": "P = 2/10 = 1/5"
+      }
+    ]
+  },
+  {
+    "topic": "Graphs",
+    "questions": [
+      {
+        "question": "What is the gradient of the line y = 2x + 3?",
+        "answer": "2",
+        "hint": "Gradient is the coefficient of x.",
+        "explanation": "m = 2"
+      },
+      {
+        "question": "Find the y-intercept of y = -3x + 4",
+        "answer": "4",
+        "hint": "y-intercept is the constant term.",
+        "explanation": "b = 4"
+      }
+    ]
+  }
+]

@@ -1,0 +1,81 @@
+<!-- templates/student_dashboard.html -->
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-4">
+  <h2>🎓 Welcome, {{ current_user.email }}</h2>
+
+  <div class="d-flex justify-content-between align-items-center mb-2">
+  <h4 class="mb-0">📊 Overall Performance</h4>
+  <button id="downloadChart" class="btn btn-sm btn-outline-success">⬇️ Export Chart</button>
+</div>
+<canvas id="accuracyChart" height="120"></canvas>
+
+<script id="topics-json" type="application/json">{{ topics | tojson | safe }}</script>
+<script id="accuracies-json" type="application/json">{{ accuracies | tojson | safe }}</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const topics = JSON.parse(document.getElementById('topics-json').textContent);
+  const accuracies = JSON.parse(document.getElementById('accuracies-json').textContent);
+
+  const ctx = document.getElementById('accuracyChart').getContext('2d');
+
+  const chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: topics,
+      datasets: [{
+        label: 'Accuracy (%)',
+        data: accuracies,
+        backgroundColor: accuracies.map(acc => acc < 60 ? 'rgba(255, 99, 132, 0.7)' : 'rgba(75, 192, 192, 0.7)'),
+        borderRadius: 5
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.parsed.y}% accuracy`
+          }
+        },
+        legend: {
+          display: false
+        },
+        title: {
+          display: true,
+          text: 'Topic Accuracy (Sorted)',
+          font: {
+            size: 18
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          title: {
+            display: true,
+            text: 'Accuracy (%)'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Topics'
+          }
+        }
+      }
+    }
+  });
+
+  // Export as PNG
+  document.getElementById('downloadChart').addEventListener('click', function () {
+    const link = document.createElement('a');
+    link.download = 'accuracy_chart.png';
+    link.href = chart.toBase64Image();
+    link.click();
+  });
+</script>
+
+{% endblock %}

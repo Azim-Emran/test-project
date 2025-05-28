@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-4">
+  <h2>📊 Student Quiz Performance</h2>
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Email</th>
+        <th>Total Quizzes</th>
+        <th>Average Score (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user_id, email, total, avg in performance %}
+      <tr>
+        <td>{{ user_id }}</td>
+        <td>{{ email }}</td>
+        <td>{{ total }}</td>
+        <td>{{ (avg * 100) | round(2) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

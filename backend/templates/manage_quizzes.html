@@ -1,0 +1,39 @@
+{% extends 'admin/layout.html' %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2 class="mb-4">📋 Manage Quizzes</h2>
+
+  <a href="{{ url_for('admin.add_quiz') }}" class="btn btn-primary mb-3">➕ Add New Quiz</a>
+
+  {% if quizzes %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Question</th>
+          <th>Topic</th>
+          <th>Answer</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for quiz in quizzes %}
+          <tr>
+            <td>{{ quiz.id }}</td>
+            <td>{{ quiz.question[:50] }}{% if quiz.question|length > 50 %}...{% endif %}</td>
+            <td>{{ quiz.topic }}</td>
+            <td>{{ quiz.answer }}</td>
+            <td>
+              <a href="{{ url_for('admin.edit_quiz', quiz_id=quiz.id) }}" class="btn btn-sm btn-warning">✏️ Edit</a>
+              <a href="{{ url_for('admin.delete_quiz', quiz_id=quiz.id) }}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">🗑️ Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No quizzes found. Start by adding one!</p>
+  {% endif %}
+</div>
+{% endblock %}

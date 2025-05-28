@@ -7,9 +7,9 @@ services:
       - "8000:8000"
     restart: always
 
-  frontend:
-    build: ./frontend
-    container_name: my_frontend
-    ports:
-      - "3000:80"
-    restart: always
+  # frontend:
+  #   build: ./frontend
+  #   container_name: my_frontend
+  #   ports:
+  #     - "3000:80"
+  #   restart: always
