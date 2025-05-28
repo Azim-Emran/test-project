@@ -1,6 +1,0 @@
-def recommend_next_topic(current_topic, quiz_history):
-    # Very basic rule-based logic
-    if quiz_history[-1]['score'] < 50:
-        return current_topic  # reinforce
-    else:
-        return "Next Topic"  # progress

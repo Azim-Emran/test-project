@@ -1,4 +1,0 @@
-topic,question,answer,hint,explanation
-Linear Equations,Solve: 2x + 3 = 11,x = 4,Isolate x by subtracting 3 and dividing by 2.,Subtract 3 from both sides to get 2x = 8, then divide by 2 to get x = 4.
-Pythagoras Theorem,Find the hypotenuse when sides are 3 and 4.,5,Use the formula a² + b² = c².,c = √(3² + 4²) = √25 = 5
-Probability,What is the probability of flipping heads on a fair coin?,0.5,Fair coins have two outcomes: heads or tails.,There are 2 possible outcomes. 1 of them is heads → 1/2 = 0.5.
